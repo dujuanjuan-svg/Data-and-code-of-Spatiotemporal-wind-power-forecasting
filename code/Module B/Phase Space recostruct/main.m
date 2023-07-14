@@ -1,0 +1,10 @@
+clc;
+warning off;
+clear all;
+warning off;
+% load beijing.mat;
+season=xlsread('...\windpower_angle4.xlsx');
+data=season(:,3);
+max_d=10;
+[Smean,Sdeltmean,Scor,tau,tw]=C_CMethod(data,max_d);
+m=(tw/tau)+1;
